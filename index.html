@@ -10,31 +10,6 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <link rel="stylesheet" href="style.css">
-  <style>body {
-    background-color: grey;
-}
-
-div.bahan {
-
-    background-color: #008B8B;
-    width: 100ex;
-    height: 100ex;
-    margin-left: auto;
-    margin-right: auto;
-
-}
-
-div.brg {
-    background-color: grey;
-    width: 10ex;
-    height: 10ex;
-    text-align: center;
-    /* border: solid black 0.3px; */
-    float: left;
-    outline: black solid 1px;
-
-}
-  </style>
 
   <title>ukuran custom</title>
 </head>
@@ -147,7 +122,7 @@ div.brg {
         <div class="card">
           <form action="">
             <div class="card-header" style="background-color: DarkCyan ">
-              <h2 class="text-center"><b>Keterangan hasil</b></h2>
+              <h2 class="text-center"><b>review</b></h2>
             </div>
             <div class="card-body">
               <h3 id="h3"></h3>
@@ -260,6 +235,7 @@ div.brg {
 
     //==============ubah ukuran bahan============
     document.getElementById("proses_horisontal").addEventListener("click", ubah_ukuran_bahan);
+    document.getElementById("proses_vertikel").addEventListener("click", ubah_ukuran_bahan);
 
     function ubah_ukuran_bahan() {
 
@@ -281,6 +257,7 @@ div.brg {
       penulisan2 = "--" + lebar_bahan + " cm" + "--";
       document.getElementById('angka_tinggi').innerHTML = penulisan2;
     }
+
 
     //=================ukuran barang===============
 
@@ -351,24 +328,28 @@ div.brg {
       bulatkan2 = Math.floor(kebawah);
 
       //hitung akhir
+
+
       total = bulatkan1 * bulatkan2;
+      var b = 1;
+      totals = total * b + 1;
 
 
       for (i = 1; i < totals; i++) {
         //setting panjang
-        var panjang = document.getElementById('panjang').value;
+
         satuan = "ex";
         hasil_panjang = panjang + satuan;
 
         //seting lebar
-        var lebar = document.getElementById('lebar').value;
+
         hasil_lebar = lebar + satuan;
 
 
         var el_div = document.createElement("DIV");
         el_div.className = 'brg';
-        el_div.style.width = hasil_panjang;
-        el_div.style.height = hasil_lebar;
+        el_div.style.width = hasil_lebar;
+        el_div.style.height = hasil_panjang;
 
         var isi_teks = document.createTextNode(i);
         el_div.appendChild(isi_teks);
