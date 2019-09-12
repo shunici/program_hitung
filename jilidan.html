@@ -1,0 +1,273 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+    <title>menghitung jilidan</title>
+</head>
+
+<body>
+    <nav class="navbar navbar-dark bg-dark">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03"
+            aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">ukuran Custom</a>
+        <a class="navbar-brand" href="index.html">
+            <div class="logo-image">
+                <img src="png_benawa.png" class="img-fluid" style="width: 30%">
+            </div>
+        </a>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+            keterangan ukuran
+        </button>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">keterangan ukuran</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body" style="padding: 10px">
+                        <p>stiker bontak = 47 x 31 cm</p>
+                        <p>kertas (a3) ap260 = 47 x 31 cm</p>
+                        <p>kertas hvs = 42 x 29.7 cm </p>
+
+
+                    </div>
+                    <div class="modal-footer">
+                        <div class=""><i style="color: lightslategrey">program masih dalam uji coba ---is created by
+                                shuni</i>
+                        </div><br>
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">tutup</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item active">
+                    <a class="nav-link" href="program_hitung_bontak.html">bontak</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="program_hitung_ap260.html">ap260</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link " href="index.html">ukuran custom</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0">
+                <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form>
+        </div>
+    </nav>
+
+    <div class="container" style="padding: 100px">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card">
+                    <form action="javascript:document.location.reload()">
+                        <div class="card-header">
+                            <h3 class="text-center"><b>Menghitung jilidan buku</b></h3>
+                        </div>
+                        <div class="card-body">
+                            <div class="input-group mb-3">
+                                <div class="input-group-prepend">
+                                    <label class="input-group-text" for="uk_jilid">ukuran cetak</label>
+                                </div>
+                                <select class="custom-select" id="uk_jilid">
+                                    <option selected>pilih...</option>
+                                    <option value="8">a6</option>
+                                    <option value="4">a5</option>
+                                    <option value="2">a4</option>
+                                    <option value="1">a3</option>
+
+                                </select>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <div class="form-group">
+                                <label for="jlh_hlmn">jumlah yang dicetak</label>
+                                <input type="number" class="form-control" id="jlh_hlmn" placeholder="berapa lembar..."
+                                    required>
+                            </div>
+                            <div class="form-group">
+                                <form action="">
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="sisi" name="sisi" class="custom-control-input"
+                                            value="1">
+                                        <label class="custom-control-label" for="sisi">1 sisi</label>
+                                    </div>
+                                    <div class="custom-control custom-radio custom-control-inline">
+                                        <input type="radio" id="customRadioInline2" name="sisi"
+                                            class="custom-control-input" value="2">
+                                        <label class="custom-control-label" for="customRadioInline2">2 sisi</label>
+                                    </div>
+                                </form>
+                            </div>
+                            <form action="" id="uk_bhn_cetak">
+                                <div class="card-footer text-muted">memakai ukuran bahan</div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="a3" id="rd_1" value="1">
+                                    <label class="form-check-label" for="rd_1">bahan a3</label>
+                                </div>
+                                <div class="form-check form-check-inline">
+                                    <input class="form-check-input" type="radio" name="a3" id="rd_2" value="2">
+                                    <label class="form-check-label" for="rd_2">bahan a4</label>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="text-center">
+                            <button class="btn btn-success" type="button" onclick="fungsi();">proses</button>
+                            <button class="btn btn-warning" type="reset" id="refresh" onclick="ulang();">ulang dari
+                                awal</button>
+                            <div class="card-footer text-muted" style="padding-top: 10px" id="massa"></div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <!-- ================================= -->
+            <div class="col-md-6">
+                <div class="card">
+                    <form action="">
+                        <div class="card-header" style="background-color:royalblue ">
+                            <h2 class="text-center"><b>review</b></h2>
+                        </div>
+                        <div class="card-body">
+                            <h2 id="selection"></h2>
+                            <h3 id="hasil_bulat"></h3>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+    <!-- ukuran kotak -->
+    <div class="text-center"
+        style="text-align: center; width: 100%; height: 50px; background-color:rgb(5, 71, 71); color: cadetblue ">
+        <h2>mohon <a href="javascript:location.reload(true)" class="btn btn-danger"> refresh </a> saat memprosesnya lagi
+        </h2>
+
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+    <!-- javascrip   ======================================t -->
+    <script src="programHitung.js"></script>
+    <script>
+        function fungsi() {
+            //uk cetak
+            var uk_jilid = document.getElementById("uk_jilid").selectedIndex;
+            uk_cetak = document.getElementsByTagName("option");
+            isi_value = uk_cetak[uk_jilid].value;
+
+            //angka yang diinput
+            var input_hlman = document.getElementById("jlh_hlmn").value;
+
+            //radio ini sisi ..mengambil nilai vakue
+            var form1 = document.forms[1];
+            var sisi = "";
+            var i;
+            for (i = 0; i < form1.length; i++) {
+                if (form1[i].checked) {
+                    sisi = sisi + form1[i].value + " ";
+                }
+            }
+
+            //uk bahan cetak// mengambil nilai value
+            var form2 = document.forms[2];
+            var uk_bahan = "";
+            var a;
+            for (a = 0; a < form2.length; a++) {
+                if (form2[a].checked) {
+                    uk_bahan = uk_bahan + form2[a].value + " ";
+                }
+            }
+
+
+            //option yang dipilih sesuai nama ukuran cetak
+            nama_ukuran_cetak = uk_cetak[uk_jilid].innerHTML;
+
+            //nama sisi
+
+
+            //pepmberian nama radio buttib bahan cetak
+            //uk bahan cetak
+
+            var value = 'Nothing selected',
+                selected = document.querySelector('input[name="a3"]:checked'),
+                selection = document.querySelector('#selection');
+
+            if (selected) {
+                value = document.querySelector('label[for="' + selected.id + '"]').innerHTML;
+            }
+            nm_bhn_cetak = selection.innerHTML = value;
+
+
+            //final
+
+            hasil = isi_value / uk_bahan;
+            if (hasil < 1) {
+                alert('maaf ukuran cetakan dengan ukuran bahan bahan tidak bisa dieksekusi');
+                location.reload();
+            } else {
+                hasil2 = input_hlman / hasil;
+                hasil3 = hasil2 / sisi;
+                bulatkan = Math.ceil(hasil3);
+                //jika hasil desimal bulatkan
+                if (hasil3 == bulatkan) {
+
+                    hasil_akhir = 'dapat ' + hasil3 + ' lembar  ukuran ' + nm_bhn_cetak + '  (' + sisi + 'sisi)';
+                    document.getElementById('selection').innerText = hasil_akhir;
+                } else {
+
+                    hasil_akhir = 'dapat ' + hasil3 + ' lembar  ukuran ' + nm_bhn_cetak + '  (' + sisi + 'sisi)';
+                    hasil_bulat = 'akan dbulat kan menjadi ' + bulatkan + ' lembar ' + nm_bhn_cetak;
+                    document.getElementById('hasil_bulat').innerText = hasil_bulat;
+                    document.getElementById('selection').innerText = hasil_akhir;
+                }
+
+
+            }
+        }
+
+        function ulang() {
+            window.onload();
+        }
+    </script>
+
+
+
+</body>
+
+</html>
